@@ -3,7 +3,10 @@ services:
   app:
     build: .
     volumes:
-      - ./:/app
+      - ../:/app
+      - ~/.ssh:/root/.ssh:ro
+    environment:
+      - GIT_SSH_COMMAND=ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no
     ports:
       - 8888:8888
     tty: true
