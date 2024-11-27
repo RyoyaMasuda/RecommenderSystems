@@ -13,4 +13,7 @@ services:
       - GIT_COMMITTER_EMAIL=despocampi.foot@gmail.com
     ports:
       - 8888:8888
+    dns:
+      - 8.8.8.8
+    stdin_open: true
     tty: true
