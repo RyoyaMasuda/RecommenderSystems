@@ -7,6 +7,10 @@ services:
       - ~/.ssh:/root/.ssh:ro
     environment:
       - GIT_SSH_COMMAND=ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no
+      - GIT_AUTHOR_NAME=Ryoya Masuda
+      - GIT_AUTHOR_EMAIL=despocampi.foot@gmail.com
+      - GIT_COMMITTER_NAME=Ryoya Masuda
+      - GIT_COMMITTER_EMAIL=despocampi.foot@gmail.com
     ports:
       - 8888:8888
     tty: true
